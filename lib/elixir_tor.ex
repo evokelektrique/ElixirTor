@@ -24,6 +24,9 @@ defmodule ElixirTor do
   @impl Behaviour
   defdelegate authenticate!(socket), to: ElixirTor.Control
 
+  @impl Behaviour
+  defdelegate authenticate!(socket, cookie), to: ElixirTor.Control
+
   @doc """
   Receive data from connection
   """
